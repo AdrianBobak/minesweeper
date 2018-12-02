@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Minesweeper</title>
+<style>
+body {
+	width: 100vh;
+}
+
+#container {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.row div {
+	border: 1px solid #000;
+	min-width: 25px;
+	min-height: 25px;
+	background: grey;
+}
+
+.opened {
+	background: rgb(179, 179, 179) !important;
+}
+
+.red {
+	background: red !important;
+}
+
+.green {
+	background: green !important;
+}
+
+#setter {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	left: 20px;
+	top: 20px;
+}
+
+#info {
+	position: fixed;
+	right: 20px;
+	top: 20px;
+}
+</style>
+</head>
+
+<body>
+	<div id="setter">
+		<input id="rows" type="text" placeholder="set rows (16 recomended)">
+		<input id="columns" type="text" placeholder="set columns (30 recomended)">
+		<input id="mines" type="text" placeholder="set mines (99 recomended)">
+		<input id="submit" type="submit" value="start!">
+	</div>
+	<div id="info"></div>
+	<div id="container"></div>
+<script src="js/script.js"></script>
+</body>
+</html>
